@@ -7,7 +7,7 @@
 <style type="text/css">
 body {
 	background-color:#000044;
-	background:url(images/bg2.jpg) no-repeat;
+	background-image:linear-gradient(#87b8ae,#c6c9a6);
 	background-attachment:fixed;
 	margin:0px;
 	overflow:hidden;
@@ -15,6 +15,19 @@ body {
 }
 a {
 	color:#0078ff;
+}
+#info{
+  position:absolute;
+  width:100%;
+  height:100%;
+  color:#fff;
+  min-width:500px;
+  font-size: 42px;
+  font-weight: 700;
+  text-shadow: #111 0px 0px 10px;
+  padding-top:10%;
+  text-align:center;
+  
 }
 </style>
 
@@ -81,7 +94,7 @@ function init() {
 	document.addEventListener( 'touchstart', onDocumentTouchStart, false );
 	document.addEventListener( 'touchmove', onDocumentTouchMove, false );
 	
-	setInterval( loop, 1000 / 60 );
+	setInterval( loop, 1000 / 30 );
 	
 }
 
@@ -142,6 +155,10 @@ for(var i = 0; i<particles.length; i++)
 	
 }
 </script>
+
+<div id="info">
+Welcome to My World !
+</div>
 
 </body>
 </html>
