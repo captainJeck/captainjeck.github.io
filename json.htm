@@ -16,7 +16,13 @@
     <![endif]-->
 		<!-- Favicons -->
 		<STYLE type="text/css">
-			h1,h2,h3,h4,h5{font-weight: bold;}
+			h1,
+			h2,
+			h3,
+			h4,
+			h5 {
+				font-weight: bold;
+			}
 		</STYLE>
 
 		<META name="GENERATOR" content="MSHTML 11.00.9600.17728">
@@ -26,22 +32,10 @@
 		<main class="row-fluid">
 			<DIV class="col-md-5" style="padding: 0px;">
 				<TEXTAREA class="form-control" id="json-src" style="border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: currentColor rgb(221, 221, 221) rgb(221, 221, 221) currentColor; padding: 20px; border-radius: 0px; border-image: none; height: 550px; resize: none;"
-				placeholder="在此输入json字符串或XML字符">在此输入json字符串或XML字符</TEXTAREA>
+				placeholder="在此输入json字符串或XML字符">"在此输入json字符串或XML字符"</TEXTAREA>
 			</DIV>
 			<DIV class="col-md-7" style="padding: 0px;">
-				<DIV class="navi" style="padding: 10px; font-size: 16px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;">
-					<A title="压缩" class="tip zip" href="#" data-placement="bottom"><I class="fa fa-database"></I></A>
-					<A title="XML" class="tip xml" href="#" data-placement="bottom"><I class="fa fa-file-excel-o"></I></A>
-					<A title="染色" class="tip " style="color: rgb(21, 179, 116); cursor: no-drop;" href="http://www.json.cn/#" data-placement="bottom"><I 
-
-class="fa fa-flask"></I></A>
-					<A title="clear" class="tip clear" href="#" data-placement="bottom"><I class="fa fa-trash"></I></A>
-					<A title="save" class="tip save" href="#" data-placement="bottom"><I class="fa fa-floppy-o"></I></A>
-				</DIV>
 				<DIV id="json-target" style="padding: 20px; border-radius: 0px; height: 510px; border-right-color: rgb(221, 221, 221); border-bottom-color: rgb(221, 221, 221); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid; -ms-overflow-y: scroll; resize: none;"></DIV>
-				<FORM id="form-save" action="/main/save.html" method="POST">
-					<INPUT name="content" id="txt-content" type="hidden">
-				</FORM>
 			</DIV>
 			<BR style="clear: both;">
 		</main>
@@ -67,75 +61,71 @@ class="fa fa-flask"></I></A>
 			var xml_flag = false;
 			var zip_flag = false;
 			$('.tip').tooltip();
-			function init(){
-			    xml_flag = false;
-			    zip_flag = false;
-			    $('.xml').attr('style','color:#999;');
-			    $('.zip').attr('style','color:#999;');
+
+			function init() {
+				xml_flag = false;
+				zip_flag = false;
+				$('.xml').attr('style', 'color:#999;');
+				$('.zip').attr('style', 'color:#999;');
 			}
-			$('#json-src').keyup(function(){
-			    init();
-			    var content = $.trim($(this).val());
-			    var result = '';
-			    if (content!='') {
-			        //如果是xml,那么转换为json
-			        if (content.substr(0,1) === '<' && content.substr(-1,1) === '>') {
-			            try{
-			                var json_obj = $.xml2json(content);
-			                content = JSON.stringify(json_obj);
-			            }catch(e){
-			                result = '解析错误<span style="color: #f1592a;font-weight:bold;">' + e.message + '</span>';
-			                current_json_str = result;
-			                $('#json-target').html(result);
-			                return false;
-			            }
-			            
-			        }
-			        try{
-			            current_json = jsonlint.parse(content);
-			            current_json_str = JSON.stringify(current_json);
-			            //current_json = JSON.parse(content);
-			            result = new JSONFormat(content,4).toString();
-			        }catch(e){
-			            result = '<span style="color: #f1592a;font-weight:bold;">' + e + '</span>';
-			            current_json_str = result;
-			        }
-			
-			        $('#json-target').html(result);
-			    }else{
-			        $('#json-target').html('');
-			    }
-			    
+			$('#json-src').keyup(function() {
+				init();
+				var content = $.trim($(this).val());
+				var result = '';
+				if (content != '') {
+					//如果是xml,那么转换为json
+					if (content.substr(0, 1) === '<' && content.substr(-1, 1) === '>') {
+						try {
+							var json_obj = $.xml2json(content);
+							content = JSON.stringify(json_obj);
+						} catch (e) {
+							result = '解析错误<span style="color: #f1592a;font-weight:bold;">' + e.message + '</span>';
+							current_json_str = result;
+							$('#json-target').html(result);
+							return false;
+						}
+					}
+					try {
+						current_json = jsonlint.parse(content);
+						current_json_str = JSON.stringify(current_json);
+						//current_json = JSON.parse(content);
+						result = new JSONFormat(content, 4).toString();
+					} catch (e) {
+						result = '<span style="color: #f1592a;font-weight:bold;">' + e + '</span>';
+						current_json_str = result;
+					}
+					$('#json-target').html(result);
+				} else {
+					$('#json-target').html('');
+				}
 			});
-			$('.xml').click(function(){
-			    if (xml_flag) {
-			        $('#json-src').keyup();
-			    }else{
-			        var result = $.json2xml(current_json);
-			        $('#json-target').html('<textarea style="width:100%;height:100%;border:0;resize:none;">'+result+'</textarea>');
-			        xml_flag = true;
-			        $(this).attr('style','color:#15b374;');
-			    }
-			     
+			$('.xml').click(function() {
+				if (xml_flag) {
+					$('#json-src').keyup();
+				} else {
+					var result = $.json2xml(current_json);
+					$('#json-target').html('<textarea style="width:100%;height:100%;border:0;resize:none;">' + result + '</textarea>');
+					xml_flag = true;
+					$(this).attr('style', 'color:#15b374;');
+				}
 			});
-			$('.zip').click(function(){
-			    if (zip_flag) {
-			        $('#json-src').keyup();
-			    }else{
-			        $('#json-target').html(current_json_str);
-			        zip_flag = true;
-			        $(this).attr('style','color:#15b374;');
-			    }
-			
+			$('.zip').click(function() {
+				if (zip_flag) {
+					$('#json-src').keyup();
+				} else {
+					$('#json-target').html(current_json_str);
+					zip_flag = true;
+					$(this).attr('style', 'color:#15b374;');
+				}
 			});
-			$('.clear').click(function(){
-			     $('#json-src').val('');
-			     $('#json-target').html('');
+			$('.clear').click(function() {
+				$('#json-src').val('');
+				$('#json-target').html('');
 			});
-			$('.save').click(function(){
-			    var content = JSON.stringify(current_json);
-			    $('#txt-content').val(content);
-			    $("#form-save").submit();
+			$('.save').click(function() {
+				var content = JSON.stringify(current_json);
+				$('#txt-content').val(content);
+				$("#form-save").submit();
 			});
 			$('#json-src').keyup();
 		</SCRIPT>
