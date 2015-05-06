@@ -1,0 +1,30 @@
+body {
+	color: rgb(85, 85, 85); font-family: Menlo,Monaco,Consolas,"Courier New",monospace, "Helvetica Neue",Helvetica,Arial,sans-serif,"微软雅黑","黑体";
+}
+a {
+	text-decoration: none; display: inline-block;
+}
+input:focus {
+	
+}
+textarea:focus {
+	
+}
+a:hover {
+	text-decoration: none;
+}
+.header {
+	padding: 0px; border-bottom-color: rgb(213, 213, 213); border-bottom-width: 1px; border-bottom-style: solid; box-shadow: 0px 0px 1px #e5e5e5;
+}
+.logo {
+	padding: 10px; color: rgb(21, 179, 116); font-size: 24px; font-weight: bold; text-decoration: none;
+}
+.navi {
+	padding: 5px 20px; font-family: Menlo,Monaco,Consolas,"Courier New",monospace, "Helvetica Neue",Helvetica,Arial,sans-serif,"幼圆"; font-size: 14px; font-weight: bold;
+}
+.navi a {
+	padding: 0px 20px; color: rgb(153, 153, 153);
+}
+.navi a:hover {
+	color: rgb(21, 179, 116);
+}
