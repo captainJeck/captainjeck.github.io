@@ -1,0 +1,14 @@
+#news{
+	 text-align: center;
+	 margin-top: 100px;
+	 height: auto;
+	 position: relative;
+}
+
+#bottom{
+	margin: 8px auto 0 auto;
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+}
