@@ -12,7 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
   你想要的，这里都有！
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://iwant.link" # the base hostname & protocol for your site
-twitter_username: jekyllrb
+qq: 35630903
 github_username:  captainJeck
 
 # Build settings
