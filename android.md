@@ -15,4 +15,10 @@ permalink: /android/
 - [Android Proguard混淆配置指南](https://github.com/inferjay/AndroidProguardGuide/)
 - [Gradle插件使用指南中文版](http://avatarqing.github.io/Gradle-Plugin-User-Guide-Chinese-Verision)
 - [Android Simples](http://developer.android.com/samples/index.html)
+- [Material Design 中文版](http://wiki.jikexueyuan.com/project/material-design/)
+- [Google Android官方培训课程中文版](http://hukai.me/android-training-course-in-chinese/index.html)
+- [Android6.0 新特性详解](http://leanote.com/blog/post/561658f938f41126b2000298?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
+- [Android学习之路](http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/)
+- [Android开发技术前线(android-tech-frontier)](https://github.com/hehonghui/android-tech-frontier)
+- [Point-of-AndroidAndroid 一些重要知识点解析整理](https://github.com/FX-Max/Point-of-Android)
 
