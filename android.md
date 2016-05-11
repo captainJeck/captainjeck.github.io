@@ -21,4 +21,6 @@ permalink: /android/
 - [Android学习之路](http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/)
 - [Android开发技术前线(android-tech-frontier)](https://github.com/hehonghui/android-tech-frontier)
 - [Point-of-AndroidAndroid 一些重要知识点解析整理](https://github.com/FX-Max/Point-of-Android)
-
+- [stormzhang博客精华](http://stormzhang.com)
+- [干货集中营](http://gank.io)
+- [Android开源项目集合](http://p.codekk.com)
