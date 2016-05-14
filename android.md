@@ -7,6 +7,8 @@ permalink: /android/
 ### 工具
 - Android Studio 1.5.1 [Windows](http://pan.baidu.com/s/1nuhv3qp) \| [Linux](http://pan.baidu.com/s/1sjTalbv) \| [Mac OS X](http://pan.baidu.com/s/1c0YQvGs)
 - Android Studio 2.0  [Windows](http://pan.baidu.com/s/1sl01ILf) \| [Linux](http://pan.baidu.com/s/1o8nGDSY) \| [Mac OS X](http://pan.baidu.com/s/1sl9VjPj)
+- Android Studio 2.1  [Linux](http://pan.baidu.com/s/1bo1vEcn)
+- Android Studio 2.1.1 [Windows](https://dl.google.com/dl/android/studio/install/2.1.1.0/android-studio-ide-143.2821654-windows.exe) \| [Linux](https://dl.google.com/dl/android/studio/ide-zips/2.1.1.0/android-studio-ide-143.2821654-linux.zip) \| [Mac OS X](https://dl.google.com/dl/android/studio/install/2.1.1.0/android-studio-ide-143.2821654-mac.dmg)
 
 ### 文档
 - [Android API指南中文版](http://api.apkbus.com/guide)
